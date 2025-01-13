@@ -1,0 +1,102 @@
+/* Contact List Container */
+.contact-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 10px 30px;
+    padding: 20px;
+    margin: 0 30px;
+}
+
+/* Contact Item */
+.contact-item {
+    background-color: #c4c2c2;
+    border-radius: 8px;
+    border: 1.5px solid rgb(27, 27, 27);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Avatar */
+.contact-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    cursor: pointer;
+}
+
+/* Contact Info */
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h3 {
+    margin: 0;
+    font-size: 16px; 
+    font-weight: normal; 
+}
+
+.contact-info p {
+    margin: 5px 0 0;
+    font-size: 16px;
+    font-weight: normal;
+    color: #313131;
+}
+
+.edit-input {
+    margin-bottom: 1px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 90%;
+  }
+  
+  /* Contact Actions */
+  .contact-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+
+/* Action Buttons */
+.contact-actions {
+    margin-top: 10px;
+}
+
+.contact-actions button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+@media (max-width: 992px) {
+    .contact-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        padding: 10px;
+        gap: 10px 20px;
+        margin: 0 20px;
+    }
+
+    .contact-avatar {
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-list {
+        grid-template-columns: repeat(1, 1fr); 
+        padding: 5px;
+        gap: 10px 20px;
+        margin: 0 15px;
+    }
+}

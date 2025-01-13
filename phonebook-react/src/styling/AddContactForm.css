@@ -1,0 +1,71 @@
+/* Container Styles */
+.form-container {
+    margin: 0 auto;
+    max-width: 600px;
+    /* Centralize form with limited width */
+}
+
+/* Form Input Styles */
+.form-input {
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1.5px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Buttons Container */
+.buttons-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+/* Button Styles */
+.form-button {
+    background-color: #af8210;
+    flex: 1; /* Make both buttons equal in width */
+    max-width: 50%; 
+    height: 40px;
+    padding: 5px;
+    border: 1.5px solid;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .form-container {
+        max-width: 500px;
+        /* Reduce container width */
+    }
+
+    .buttons-container {
+        gap: 10px;
+    }
+
+    .form-button {
+        max-width: 50%;
+        /* Full-width buttons */
+    }
+}
+
+@media (max-width: 576px) {
+    .form-container {
+        max-width: 95%;
+    }
+
+    .buttons-container {
+        gap: 2px;
+    }
+
+    .form-button {
+        max-width: 48%;
+    }
+}

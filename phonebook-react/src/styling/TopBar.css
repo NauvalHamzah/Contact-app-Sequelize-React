@@ -1,0 +1,68 @@
+/* Top Bar Styling */
+.top-bar {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 30px;
+    position: sticky;
+    top: 10px;
+    z-index: 1000;
+}
+
+/* Sort Button */
+.sort-button {
+    padding: 5px 10px;
+    height: 40px;
+    background-color: #af8210;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+/* Search Container */
+.search-container {
+    position: relative;
+    flex-grow: 1;
+    height: 40px;
+}
+
+/* Search Icon */
+.search-icon {
+    position: absolute;
+    left: 10px; /* Adjust spacing from the left edge */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Search Input */
+.search-input {
+    width: 97%;
+    height: 30px;
+    padding: 5px;
+    padding-left: 30px; /* Add padding to make space for the icon */
+}
+
+/* Add User Button */
+.add-user-button {
+    padding: 5px 10px;
+    height: 40px;
+    background-color: #af8210;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .search-input {
+        width: calc(100% - 40px); /* Adjust width to account for icon spacing */
+    }
+}
+
+@media (max-width: 576px) {
+    .search-input {
+        padding-left: 35px; /* Add more padding for smaller screens */
+        width: calc(100% - 40px);
+    }
+}
