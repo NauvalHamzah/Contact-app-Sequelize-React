@@ -22,12 +22,12 @@ export default function ContactItem({ contact, remove, update, updateAvatar }) {
                 [id]: imageUrl,
             }));
 
-             // Prepare FormData and pass to App.jsx handler
-             const formData = new FormData();
-             formData.append('avatar', file);
- 
-             // Call the handler passed down from App.jsx to update the avatar
-             updateAvatar(id, formData);
+            // Prepare FormData and pass to App.jsx handler
+            const formData = new FormData();
+            formData.append('avatar', file);
+
+            // Call the handler passed down from App.jsx to update the avatar
+            updateAvatar(id, formData);
         }
     };
 
@@ -43,6 +43,7 @@ export default function ContactItem({ contact, remove, update, updateAvatar }) {
                 />
                 <input
                     id={`avatar-upload-${contact.id}`}
+                    data-testid={`avatar-upload-${contact.id}`}
                     type="file"
                     accept="image/*"
                     style={{ display: 'none' }}
@@ -58,16 +59,19 @@ export default function ContactItem({ contact, remove, update, updateAvatar }) {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         className="edit-input"
+                        aria-label="contact-name"
                     />
                     <input
                         type="text"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         className="edit-input"
+                        aria-label="contact-phone"
                     />
                     <div className="contact-actions">
                         <button
                             className="save-btn"
+                            aria-label="save-edit"
                             onClick={() => {
                                 if (name === '' || phone === '') {
                                     alert('Nama atau nomor telepon tidak boleh kosong');
@@ -87,10 +91,12 @@ export default function ContactItem({ contact, remove, update, updateAvatar }) {
                     <h3>{contact.name}</h3>
                     <p>{contact.phone}</p>
                     <div className="contact-actions">
-                        <button className="edit-btn" onClick={() => setOnEdit(true)}>
+                        <button name="edit-contact" className="edit-btn" aria-label="edit-contact" onClick={() => {
+                            setOnEdit(true);
+                        }}>
                             <i className="fas fa-edit"></i>
                         </button>
-                        <button className="delete-btn" onClick={() => remove(contact.id)}>
+                        <button name="delete-contact" className="delete-btn" aria-label="delete-contact" onClick={() => remove(contact.id)}>
                             <i className="fas fa-trash-alt"></i>
                         </button>
                     </div>

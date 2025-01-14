@@ -38,7 +38,7 @@ export default function TopBar ({onSearch, onSort, isAsc}) {
             </div>
     
             {/* Add User Button */}
-            <button onClick={onAddUser} className="add-user-button">
+            <button onClick={onAddUser} className="add-user-button" aria-label='add-user'>
                 <FontAwesomeIcon icon={faUserPlus} />
             </button>
         </div>

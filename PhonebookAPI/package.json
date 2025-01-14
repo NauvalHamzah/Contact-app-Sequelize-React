@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "mocha --recursive --timeout 5000 test/routes/*.test.js",
+    "test": "mocha --recursive --timeout 5000 test/controllers/*.test.js",
     "dev": "nodemon app.js"
   },
   "keywords": [],
